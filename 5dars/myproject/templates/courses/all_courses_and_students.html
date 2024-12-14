@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Barcha Kurslar va Talabalar</h1>
+<h2>Kurslar</h2>
+<ul>
+    {% for course in courses %}
+    <li>
+        <a href="{% url 'course_students' course.id %}">{{ course.title }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+<h2>Talabalar</h2>
+<ul>
+    {% for student in students %}
+    <li>
+        <a href="{% url 'student_detail' student.id %}">{{ student.name }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

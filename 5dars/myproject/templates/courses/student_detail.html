@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Talaba haqida ma'lumot</h1>
+<p><strong>Ismi:</strong> {{ student.name }}</p>
+<p><strong>Email:</strong> {{ student.email }}</p>
+<p><strong>Ro'yxatdan o'tgan vaqti:</strong> {{ student.enrolled_at }}</p>
+<p><strong>Kurs:</strong> {{ student.course.title }}</p>
+<a href="{% url 'all_courses_and_students' %}">Orqaga</a>
+{% endblock %}
